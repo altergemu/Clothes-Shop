@@ -1,5 +1,9 @@
-import { Code } from "@chakra-ui/react";
+import { Footer } from "@/widgets";
 
 export default function Index() {
-  return <Code>(FSD) Remix-Vite + Chakra template</Code>;
+  return (
+    <>
+      <Footer />
+    </>
+  );
 }
