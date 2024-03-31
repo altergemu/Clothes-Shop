@@ -3,9 +3,9 @@ import { chakra, HStack, Icon } from "@/shared";
 
 export function Social() {
   const links = [
-    { logo: FaGoogle, href: "https://google.com" },
-    { logo: FaApple, href: "https://google.com" },
-    { logo: FaGithub, href: "https://google.com" },
+    { logo: FaGoogle, href: "1" },
+    { logo: FaApple, href: "2" },
+    { logo: FaGithub, href: "3" },
   ];
 
   return (

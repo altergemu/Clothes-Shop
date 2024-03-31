@@ -1,10 +1,27 @@
 import { faker } from "@faker-js/faker/locale/ru";
+import { json } from "@remix-run/node";
+import { useLoaderData } from "@remix-run/react";
 import { Footer } from "@/widgets/footer";
 import { Navbar } from "@/widgets/navbar";
-import { ProductCard, ProductCardProvider } from "@/entities/product";
-import { Grid } from "@/shared";
+import {
+  IProductCard,
+  ProductCard,
+  ProductCardProvider,
+} from "@/entities/product";
+import { Grid, GridItem } from "@/shared";
+
+export function loader() {
+  const products: IProductCard[] = [];
+  for (let i = 0; i < faker.number.int({ min: 1, max: 100 }); i++)
+    products.push({
+      name: faker.commerce.productName(),
+      price: faker.number.int({ min: 10, max: 100 }),
+    });
+  return json(products);
+}
 
 export default function Index() {
+  const products = useLoaderData<typeof loader>();
   return (
     <>
       <Navbar />
@@ -13,19 +30,13 @@ export default function Index() {
         gap={5}
         padding={5}
       >
-        {Array(10)
-          .fill(null)
-          .map((v, i) => (
-            <ProductCardProvider
-              key={i}
-              value={{
-                name: faker.commerce.productName(),
-                price: faker.number.int({ min: 1, max: 100 }),
-              }}
-            >
+        {products.map((product, i) => (
+          <GridItem key={i}>
+            <ProductCardProvider value={product}>
               <ProductCard />
             </ProductCardProvider>
-          ))}
+          </GridItem>
+        ))}
       </Grid>
       <Footer />
     </>
