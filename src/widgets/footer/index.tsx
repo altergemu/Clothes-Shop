@@ -1,5 +1,5 @@
 import { Link } from "@remix-run/react";
-import { Heading, HStack, VStack } from "@/shared";
+import { HStack, Logo, VStack } from "@/shared";
 import { Contact } from "./contact";
 import { Social } from "./social";
 
@@ -7,8 +7,7 @@ export function Footer() {
   return (
     <VStack as={"footer"} padding={5} background={"cyan.100"}>
       <HStack justifyContent={"space-between"} width={"full"}>
-        <Heading>Logo</Heading>
-        {/*<Logo />*/}
+        <Logo />
         <Social />
         <Contact />
       </HStack>
@@ -21,3 +20,5 @@ export function Footer() {
     </VStack>
   );
 }
+
+export { Social as FooterSocial, Contact as FooterContact };

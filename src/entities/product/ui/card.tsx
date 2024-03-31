@@ -22,8 +22,7 @@ export function Card() {
       borderColor={"gray.200"}
       role={"group"}
       overflow={"hidden"}
-      spacing={1}
-      aspectRatio={3 / 5}
+      aspectRatio={8 / 13}
       justifyContent={"space-between"}
     >
       <chakra.a as={Link} to={"/f"} width={"full"}>
