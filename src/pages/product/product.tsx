@@ -1,4 +1,5 @@
 import { Card } from '@/entities';
+import {Slider} from "@/entities";
 import s from './product.module.scss';
 
 export default function Product() {
@@ -8,9 +9,14 @@ export default function Product() {
 
             </div>
             <div className={s.main}>
+                <article>
+                    <Slider/>
+                </article>
+                <article className={s.card}>
                     <Card/>
                     <Card/>
                     <Card/>
+                </article>
             </div>
             <div className={s.footer}>
 
