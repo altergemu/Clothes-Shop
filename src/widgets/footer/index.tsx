@@ -5,7 +5,7 @@ import { Social } from "./social";
 
 export function Footer() {
   return (
-    <VStack as={"footer"} padding={5}>
+    <VStack as={"footer"} padding={5} background={"cyan.100"}>
       <HStack justifyContent={"space-between"} width={"full"}>
         <Heading>Logo</Heading>
         {/*<Logo />*/}

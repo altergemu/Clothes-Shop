@@ -25,9 +25,6 @@ export default ({ mode }: ConfigEnv) => {
 
             // Home page
             route("/", "../pages/home/index.tsx");
-
-            // Detailed Product page
-            route("/product", "../pages/product/product.tsx");
           });
         },
       }),

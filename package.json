@@ -25,6 +25,7 @@
     "react-icons": "latest"
   },
   "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
     "@feature-sliced/eslint-config": "latest",
     "@remix-run/dev": "latest",
     "@types/react": "latest",
