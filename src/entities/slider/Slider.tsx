@@ -1,4 +1,4 @@
-import {Link} from '@remix-run/react';
+/*import {Link} from '@remix-run/react';
 import s from './Slider.module.scss';
 
 export function Slider() {
@@ -31,4 +31,4 @@ export function Slider() {
     </section>
 
     )
-}
+}*/

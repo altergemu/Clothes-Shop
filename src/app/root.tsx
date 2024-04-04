@@ -1,14 +1,4 @@
 import {
-  isRouteErrorResponse,
-  Links,
-  Meta,
-  Outlet,
-  Scripts,
-  ScrollRestoration,
-  useLoaderData,
-  useRouteError,
-} from "@remix-run/react";
-import {
   Box,
   Center,
   ChakraProvider,
@@ -18,9 +8,20 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { withEmotionCache } from "@emotion/react";
-import React from "react";
-import { useEmotion } from "./emotion/use-emotion.hook";
 import { json } from "@remix-run/node";
+import {
+  isRouteErrorResponse,
+  Links,
+  Meta,
+  Outlet,
+  Scripts,
+  ScrollRestoration,
+  useLoaderData,
+  useRouteError,
+} from "@remix-run/react";
+import React from "react";
+
+import { useEmotion } from "./emotion/use-emotion.hook";
 import { theme } from "./theme";
 
 export async function loader() {
