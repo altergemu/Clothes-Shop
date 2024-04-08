@@ -5,7 +5,7 @@
  */
 
 import { RemixBrowser } from "@remix-run/react";
-import { startTransition, StrictMode } from "react";
+import { startTransition } from "react";
 import { hydrateRoot } from "react-dom/client";
 import { clearBrowserExtensionInjectionsBeforeHydration } from "./clear-browser-extension-injection";
 import { ClientCacheProvider } from "./emotion/client-cache.provider";
@@ -16,10 +16,9 @@ clearBrowserExtensionInjectionsBeforeHydration();
 startTransition(() => {
   hydrateRoot(
     document,
-    <StrictMode>
-      <ClientCacheProvider>
-        <RemixBrowser />
-      </ClientCacheProvider>
-    </StrictMode>
+
+    <ClientCacheProvider>
+      <RemixBrowser />
+    </ClientCacheProvider>
   );
 });
